@@ -1,7 +1,8 @@
 import React from 'react'
+import type { User } from '../lib/api'
 
 interface MostfindModuleProps {
-  user?: any
+  user?: User | null
   isOwner: boolean
   isMostfindEditing: boolean
   setIsMostfindEditing: (editing: boolean) => void

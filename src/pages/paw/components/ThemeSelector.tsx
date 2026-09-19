@@ -2,10 +2,10 @@ import { THEMES, type Theme } from '../../../themes'
 import { useState } from 'react'
 
 interface ThemeSelectorProps {
-  currentTheme: typeof THEMES[0]
-  onThemeChange: (theme: typeof THEMES[0]) => void
+  currentTheme: Theme
+  onThemeChange: (theme: Theme) => void
   onClose?: () => void
-  onCustomThemeCreate?: (theme: any) => void
+  onCustomThemeCreate?: (theme: Theme) => void
 }
 
 export const ThemeSelector: React.FC<ThemeSelectorProps> = ({ currentTheme, onThemeChange, onClose, onCustomThemeCreate }) => {

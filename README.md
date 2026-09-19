@@ -53,16 +53,16 @@ src/
 │   │   ├── components/      # 首页专用组件
 │   │   └── styles/          # 首页样式
 │   ├── member/              # i.catcat.meme 申请页
-│   │   ├── BlogHome.tsx
-│   │   ├── Setup.tsx
+│   │   ├── BlogHomePage.tsx
+│   │   ├── SetupPage.tsx
 │   │   ├── components/
 │   │   └── styles/
 │   ├── paw/                 # k.catcat.meme 个人页
-│   │   ├── UserProfile.tsx
+│   │   ├── ProfilePage.tsx
 │   │   ├── components/
 │   │   └── styles/
 │   └── admin/               # i.catcat.meme/admin 管理页
-│       ├── Dashboard.tsx
+│       ├── DashboardPage.tsx
 │       ├── components/
 │       └── styles/
 ├── components/              # 全局共用组件
@@ -81,17 +81,17 @@ src/
 - **功能**: 网站首页展示
 
 #### 2. i.catcat.meme → `src/pages/member/`
-- **入口**: `BlogHome.tsx`
+- **入口**: `BlogHomePage.tsx`
 - **路由**: 子域名 `i.catcat.meme`
 - **功能**: 个人页面申请
 
 #### 3. k.catcat.meme → `src/pages/paw/`
-- **入口**: `UserProfile.tsx`
+- **入口**: `ProfilePage.tsx`
 - **路由**: 用户子域名 `{user}.catcat.meme`
 - **功能**: 个人页面展示
 
 #### 4. i.catcat.meme/admin → `src/pages/admin/`
-- **入口**: `Dashboard.tsx`
+- **入口**: `DashboardPage.tsx`
 - **路由**: `/admin` 路径
 - **功能**: 管理员面板
 
@@ -220,7 +220,7 @@ if (hostname.endsWith('.catcat.meme')) {
 }
 ```
 
-**用户跳转** (`src/blog/pages/Setup.tsx`):
+**用户跳转** (`src/pages/member/SetupPage.tsx`):
 ```typescript
 // 创建用户后跳转到子域名
 window.location.href = `https://${username}.catcat.meme/`
@@ -326,9 +326,9 @@ npm run dev
 ```
 
 #### 3. 访问测试
-- 首页: http://catcat.meme:5173
-- 博客: http://i.catcat.meme:5173  
-- 用户页面: http://test.catcat.meme:5173
+- 首页: http://catcat.meme:5701
+- 博客: http://i.catcat.meme:5701  
+- 用户页面: http://test.catcat.meme:5701
 
 ### 生产环境部署
 

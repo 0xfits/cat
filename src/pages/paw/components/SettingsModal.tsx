@@ -34,7 +34,7 @@ export const SettingsModal = ({ user, isOpen, onClose, onSave }: SettingsModalPr
     
     try {
       // 如果修改了用户名，更新修改次数和年份
-      let updatedUser = { ...formData }
+      const updatedUser = { ...formData }
       if (formData.username !== user.username) {
         const currentYear = new Date().getFullYear()
         updatedUser.usernameChangeCount = (user.usernameChangeCount || 0) + 1

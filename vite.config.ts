@@ -123,6 +123,14 @@ function shouldIgnoreRollupLog(level: LogLevel, log: RollupLog): boolean {
 export default defineConfig({
   base: '/',
   plugins: [react()],
+  server: {
+    port: 5701,
+    strictPort: true,
+  },
+  preview: {
+    port: 5701,
+    strictPort: true,
+  },
   build: {
     rollupOptions: {
       onLog(level, log, defaultHandler: LogOrStringHandler) {
